@@ -1,6 +1,6 @@
 $navbarBackgroundHighlight: white;
 $navbarBackground: white;
-$btnPrimaryBackground: purple;
+$btnPrimaryBackground: blue;
 
 @import 'bootstrap';
 body{
@@ -9,9 +9,32 @@ body{
 
 @import 'bootstrap-responsive';
 
-.navbar-inner{
-    @include box-shadow(none !important);
-    border: 1;
+.navbar-inner {
+  @include box-shadow(none !important);
+  border: 1;
+}
+
+.top-container {
+	border-bottom:1px solid LightGrey;
+	padding-bottom: 3%;
+}
+
+.top-left-content {
+	padding-right: 8%;
+}
+
+.right-border {
+	border-right: 1px solid LightGrey;
+}
+
+.sidebar {
+	background-color:#EEEEEE;
+	text-align: center;
+}
+
+.main-content {
+	text-align: center;
+
 }
 
 .footer{
