@@ -1,11 +1,7 @@
-<%= simple_form_for(@opportunity) do |f| %>
+<%= simple_form_for([@company, @company.opportunities.build], html: {class: "form-inline"}) do |f| %>
   <%= f.error_notification %>
+  
+  <%= f.input :description, label: false, placeholder: 'Create an opportunity', input_html: { class: "span4" } %>
+  <%= f.submit 'Submit', class: 'btn btn-small'%>
 
-  <div class="form-inputs">
-    <%= f.input :description %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
 <% end %>

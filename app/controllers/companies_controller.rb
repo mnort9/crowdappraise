@@ -17,6 +17,8 @@ class CompaniesController < ApplicationController
     # Find all opportunites with company_id association
     @opportunities = @company.opportunities.find(:all)
 
+    @opportunity = Opportunity.new
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @company }

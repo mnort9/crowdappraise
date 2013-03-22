@@ -40,11 +40,13 @@ class OpportunitiesController < ApplicationController
   # POST /opportunities
   # POST /opportunities.json
   def create
-    @opportunity = Opportunity.new(params[:opportunity])
+    @company = Company.find(params[:company_id])
+    @opportunity = @company.opportunities.create(params[:opportunity])
+    #@opportunity = Opportunity.new(params[:opportunity])
 
     respond_to do |format|
       if @opportunity.save
-        format.html { redirect_to @opportunity, notice: 'Opportunity was successfully created.' }
+        format.html { redirect_to company_path(@company), notice: 'Opportunity was successfully created.' }
         format.json { render json: @opportunity, status: :created, location: @opportunity }
       else
         format.html { render action: "new" }

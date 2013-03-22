@@ -1,10 +1,8 @@
 Crowdappraise::Application.routes.draw do
 
-  resources :companies
-
-
-  resources :opportunities
-
+  resources :companies do
+    resources :opportunities
+  end
 
   devise_for :users
 

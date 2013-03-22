@@ -15,14 +15,16 @@
   <div class="span2 sidebar">
   	<h4>Opportunites</h4>
   	<h4>Threats</h4>
-
   </div>
   <div class="span5 main-content">
   	<div class="right-border">
   		<h3>Opportunites</h3>
-  			<table class="table table-hover">
-  				<%= render @opportunities %>
-  			</table>
+			<table class="table table-hover">
+				<%= render @opportunities %>
+			</table>
+			<div class="inline-form">
+				<%= render 'opportunities/form' %>
+			</div>
   	</div>
   </div>
   <div class="span5 main-content">
