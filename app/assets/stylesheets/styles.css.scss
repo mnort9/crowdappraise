@@ -30,16 +30,21 @@ body{
 .sidebar {
 	background-color:#EEEEEE;
 	text-align: center;
+  min-height: 500px;
 }
 
 .sidebar-box {
-
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-bottom:1px solid LightGrey;
 }
 
-.sidebar-box-selected {
+.sidebar-box.selected {
   background-color: DarkGrey;
-  min-height: 100px;
-  margin-top: -10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  //margin-top: -10px;
+  
 }
 
 .main-content {
