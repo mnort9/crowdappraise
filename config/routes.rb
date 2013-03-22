@@ -1,5 +1,8 @@
 Crowdappraise::Application.routes.draw do
 
+  resources :companies
+
+
   resources :opportunities
 
 
