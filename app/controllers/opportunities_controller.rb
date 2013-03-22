@@ -74,11 +74,12 @@ class OpportunitiesController < ApplicationController
   # DELETE /opportunities/1
   # DELETE /opportunities/1.json
   def destroy
-    @opportunity = Opportunity.find(params[:id])
+    @company = Company.find(params[:company_id])
+    @opportunity = @company.opportunities.find(params[:id])
     @opportunity.destroy
 
     respond_to do |format|
-      format.html { redirect_to opportunities_url }
+      format.html { redirect_to company_path(@company) }
       format.json { head :no_content }
     end
   end
