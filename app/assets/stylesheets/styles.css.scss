@@ -43,17 +43,31 @@ body{
   background-color: DarkGrey;
   padding-top: 15px;
   padding-bottom: 15px;
-  //margin-top: -10px;
-  
 }
 
 .main-content {
 	text-align: center;
 }
 
+// Table *******
+.table th, .table td { 
+     border-top: none; 
+ }
+
+ .table td.user {
+  font-size: 11px;
+
+  padding-bottom: 15px;
+ }
+
+ .table td.description {
+ }
+
+
 .form-inline {
   text-align: left;
 }
+// **************
 
 .footer{
     margin-top: 50px;

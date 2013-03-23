@@ -1,4 +1,12 @@
 <tr>
-  <td><%= opportunity.description %></td>
-  <td><%= link_to 'Destroy', [@company, opportunity], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <td class="description">
+  	<%= opportunity.description %>
+  </td>
+</tr>
+<tr>
+	<td class="user"> by
+		<%= link_to 'Matthew Norton', "#" %>
+		|
+		<%= link_to 'Destroy', [@company, opportunity], method: :delete, data: { confirm: 'Are you sure?' } %>
+	</td>
 </tr>
