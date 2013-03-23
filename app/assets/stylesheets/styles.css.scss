@@ -23,40 +23,48 @@ body{
 	padding-right: 8%;
 }
 
-.right-border {
-	border-right: 1px solid LightGrey;
+// Nav-content *************
+.navbar.container {
+  text-align:center;
+  width:350px;
 }
 
-.sidebar {
+.nav-content {
 	background-color:#EEEEEE;
 	text-align: center;
-  min-height: 500px;
 }
 
-.sidebar-box {
-  padding-top: 25px;
-  padding-bottom: 25px;
-  border-bottom:1px solid LightGrey;
+.box {
+  text-align:center;
+  border-right:1px solid LightGrey;
+  padding:1px;
 }
 
-.sidebar-box.selected {
+.box.selected {
   background-color: DarkGrey;
-  padding-top: 15px;
-  padding-bottom: 15px;
 }
+
+.right-border {
+  border-right: 1px solid LightGrey;
+}
+
+// *************
 
 .main-content {
 	text-align: center;
 }
 
 // Table *******
-.table th, .table td { 
-     border-top: none; 
+table {
+  padding-top: 2%;
+}
+
+.table th, .table td {
+  border-top: none; 
  }
 
  .table td.user {
   font-size: 11px;
-
   padding-bottom: 15px;
  }
 

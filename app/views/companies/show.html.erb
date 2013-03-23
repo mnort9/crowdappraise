@@ -7,32 +7,52 @@
 			<p>skillshare.com</p>
 		</div>
 	</div>
+
 	<div class="span4">
 		<%= image_tag("skillshare.png") %>  
 	</div>
 </div>
 <div class="row">
-  <div class="span2 sidebar">
-  	<div class="sidebar-box selected">
+    <div class="navbar container">
+      <ul class="nav">
+        <li class="active">
+          <a href="#">
+          Opportunities | Threats
+          </a>
+        </li>
+        <li><a href="#">Competitors</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+    </div>
+</div>
+
+
+<!-- 
+  <div class="span3 offset2">
+  	<div class="box selected">
   	  <h5>Opportunities</h5>
   		<h5>Threats</h5>
   	</div>
-  	<div class="sidebar-box">
-  		<h5>Competitors</h5>
-  	</div>
   </div>
-  <div class="span5 main-content">
-  	<div class="right-border">
-  		<h3>Opportunities</h3>
-			<table class="table table-condensed">
-				<%= render @opportunities %>
-			</table>
-			<div class="inline-form">
-				<%= render 'opportunities/form' %>
-			</div>
-  	</div>
+  <div class="span4 box">
+  	<h5>Competitors</h5>
   </div>
-  <div class="span5 main-content">
-  	<h3>Threats</h3>
+ -->
+<div class="main-content">
+  <div class="row">
+    <div class="span6">
+    	<div class="right-border">
+    		<h2>Opportunities</h2>
+  			<table class="table table-condensed">
+  				<%= render @opportunities %>
+  			</table>
+  			<div class="inline-form">
+  				<%= render 'opportunities/form' %>
+  			</div>
+    	</div>
+    </div>
+    <div class="span6">
+    	<h2>Threats</h2>
+    </div>
   </div>
 </div>
