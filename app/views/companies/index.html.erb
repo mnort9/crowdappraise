@@ -1,20 +1,4 @@
-<h1>Listing companies</h1>
-
-<table class="table">
-  <thead>
-    <tr>
-      <th>Image</th>
-      <th>Name</th>
-      <th>Description</th>
-      <th>URL</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <%= render @companies %>
-  </tbody>
-</table>
-
-<br />
-
-<%= link_to 'New Company', new_company_path %>
+<%= link_to "Add Company Appraisal +", new_company_path %> 
+<div id="companies">  
+  <%= render @companies %>
+</div>
