@@ -1,9 +1,9 @@
-<% @companies.each do |company| %>
   <tr>
   	<td><%= image_tag company.image(:medium) %></td>
     <td><%= company.name %></td>
+    <td><%= company.description %></td>
+    <td><%= company.url %></td>
     <td><%= link_to 'Show', company %></td>
     <td><%= link_to 'Edit', edit_company_path(company) %></td>
     <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
-<% end %>

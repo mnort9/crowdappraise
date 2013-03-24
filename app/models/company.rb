@@ -1,5 +1,5 @@
 class Company < ActiveRecord::Base
-  attr_accessible :name, :image
+  attr_accessible :name, :image, :description, :url
 
   validates :name, presence: true
   validates_attachment :image, presence: true,
