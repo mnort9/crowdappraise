@@ -1,4 +1,12 @@
-<%= link_to "Add Company Appraisal +", new_company_path %> 
+<center>
+  <h1>Companies</h1>
+  <% if user_signed_in? %>
+    <div>
+      <%= link_to "Add +", new_company_path %> 
+    </div>
+  <% end %>
+</center>
+<br>
 <div id="companies">  
   <%= render @companies %>
 </div>
