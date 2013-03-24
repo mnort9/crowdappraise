@@ -2,13 +2,13 @@
 <div class="row top-container">
 	<div class="span8">
 		<div class="top-left-content">
-			<h1>SkillShare</h1>
+			<h1><%= @company.name %></h1>
 			<p>Skillshare is a community marketplace to learn anything from anyone. People can offer classes to others on any type of skill, from baking cupcakes to raising startup capital.</p>
 			<p>skillshare.com</p>
 		</div>
 	</div>
 	<div class="span4">
-		<%= image_tag("skillshare.png") %>  
+		<%= image_tag @company.image(:medium) %>  
 	</div>
 </div>
 <div class="row main-content">
