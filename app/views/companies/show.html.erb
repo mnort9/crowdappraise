@@ -3,7 +3,12 @@
 	<div class="span8">
 		<div class="top-left-content">
 			<h1><%= @company.name %></h1>
-			<p><%= @company.description %></p>
+			 <!-- Description is placed in javascipt so Google doesn't index the content -->
+      <p id="element<%=@company.id%>"></p>
+      <script type="text/javascript">
+        var content = "<%= @company.description %>";
+        document.getElementById("element<%=@company.id%>").innerHTML=content;
+      </script>
       <p><%= @company.url %></p>
 		</div>
 	</div>

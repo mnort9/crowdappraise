@@ -1,7 +1,13 @@
 <div class="company-box">
 	<%= link_to (image_tag company.image(:medium)), company %>
 	<h4><%= company.name %></h4>
-	<%= company.description %>
+
+	<!-- Description is placed in javascipt so Google doesn't index the content -->
+	<p id="element<%=company.id%>"></p>
+	<script type="text/javascript">
+		var content = "<%= company.description %>";
+		document.getElementById("element<%=company.id%>").innerHTML=content;
+	</script>
 <p>
 	<%= link_to 'Edit', edit_company_path(company) %>
 	<% if company.user == current_user %>
