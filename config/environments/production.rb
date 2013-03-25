@@ -72,9 +72,9 @@ Crowdappraise::Application.configure do
   config.paperclip_defaults = {
   :storage => :s3,
   :s3_credentials => {
-    :bucket => ENV['crowdappraise'],
-    :access_key_id => ENV['AKIAJQDXWDSWMIRJKNTQ'],
-    :secret_access_key => ENV['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']
+    :bucket => ENV['AWS_BUCKET'],
+    :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    }
   }
-}
 end
