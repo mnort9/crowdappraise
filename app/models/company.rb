@@ -10,9 +10,5 @@ class Company < ActiveRecord::Base
   belongs_to :user
   validates :user_id, presence: true
   has_attached_file :image,
-  									 styles: { medium: "320x240>" },
-  									 :storage => :s3, 
-                     :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
-                     :path => "appname/:attachment/:style/:id.:extension"
-  
+  									 styles: { medium: "320x240>" }
 end
