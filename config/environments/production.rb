@@ -67,4 +67,14 @@ Crowdappraise::Application.configure do
 
   # In production, :host should be set to the actual host of your application.
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  # Paperclip should use S3 on heroku
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => ENV['crowdappraise'],
+    :access_key_id => ENV['AKIAJQDXWDSWMIRJKNTQ'],
+    :secret_access_key => ENV['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']
+  }
+}
 end
