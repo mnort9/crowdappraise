@@ -7,6 +7,8 @@ class Company < ActiveRecord::Base
   														 size: { less_than: 5.megabytes }
 
   has_many :opportunities
+  belongs_to :user
+  validates :user_id, presence: true
   has_attached_file :image, styles: { medium: "320x240>" }
   
 end
