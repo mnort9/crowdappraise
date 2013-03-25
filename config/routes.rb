@@ -5,8 +5,10 @@ Crowdappraise::Application.routes.draw do
   end
 
   devise_for :users
-
+  match '/users/:id', :to => 'users#show', :as => :user
+  
   root :to => 'pages#home'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
