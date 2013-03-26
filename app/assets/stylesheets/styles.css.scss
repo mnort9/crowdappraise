@@ -9,6 +9,11 @@ body{
 
 @import 'bootstrap-responsive';
 
+.showcase {
+  padding-top: 3%;
+  padding-bottom: 4%;
+}
+
 .navbar-inner {
   @include box-shadow(none !important);
   border: 1;
