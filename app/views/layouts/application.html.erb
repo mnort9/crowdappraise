@@ -17,5 +17,7 @@
       <%= render 'layouts/footer' %>
     </div>
     
+   <!-- Google Analytics --> 
+   <%= render :partial => 'layouts/ga' if Rails.env == 'production' %> 
   </body>
 </html>
