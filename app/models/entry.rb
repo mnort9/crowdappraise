@@ -1,4 +1,4 @@
-class Opportunity < ActiveRecord::Base
+class Entry < ActiveRecord::Base
   attr_accessible :description
 
   validates :description, presence: true

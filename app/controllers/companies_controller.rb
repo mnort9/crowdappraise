@@ -15,9 +15,9 @@ class CompaniesController < ApplicationController
   def show
     @company = Company.find(params[:id])
     # Find all opportunites with company_id association
-    @opportunities = @company.opportunities.find(:all)
+    @entries = @company.entries.find(:all)
 
-    @opportunity = Opportunity.new
+    @entry = Entry.new
 
     respond_to do |format|
       format.html # show.html.erb

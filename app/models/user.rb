@@ -10,5 +10,5 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
 
   has_many :companies
-  has_many :opportunities
+  has_many :entries
 end

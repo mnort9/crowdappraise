@@ -1,8 +1,8 @@
 <% if user_signed_in? %>
-	<%= simple_form_for([@company, @company.opportunities.build], html: {class: "form-inline"}) do |f| %>
+	<%= simple_form_for([@company, @company.entries.build], html: {class: "form-inline"}) do |f| %>
 	  <%= f.error_notification %>
 	  
-	  <%= f.input :description, label: false, placeholder: 'Create an opportunity', input_html: { class: "span4" } %>
+	  <%= f.input :description, label: false, placeholder: 'Create an entry', input_html: { class: "span4" } %>
 	  <%= f.submit 'Submit', class: 'btn btn-small'%>
 	<% end %>
 <% else %>

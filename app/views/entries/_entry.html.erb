@@ -1,0 +1,14 @@
+<tr>
+  <td class="description">
+  	<%= entry.description %>
+  </td>
+</tr>
+<tr>
+	<td class="user"> by
+		<%= link_to entry.user.username, entry.user %>
+		<% if entry.user == current_user %>
+			|
+			<%= link_to 'Destroy', [@company, entry], method: :delete, data: { confirm: 'Are you sure?' } %>
+			<% end %>
+	</td>
+</tr>
