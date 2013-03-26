@@ -9,8 +9,8 @@
 		document.getElementById("element<%=company.id%>").innerHTML=content;
 	</script>
 <p>
-	<%= link_to 'Edit', edit_company_path(company) %>
 	<% if company.user == current_user %>
+		<%= link_to 'Edit', edit_company_path(company) %>
 		|
 		<%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %>
 	<% end %>
