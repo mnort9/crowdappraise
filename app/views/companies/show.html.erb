@@ -29,15 +29,21 @@
   <div class="span5">
   	<div class="right-border">
   		<h3>Opportunities</h3>
-			<table class="table table-condensed">
-				<%= render @entries %>
-			</table>
+  			<table class="table table-condensed">
+  				<%= render @entries, :entry_name => Entry::OPPORTUNITY %>
+  			</table>
 			<div class="inline-form">
-				<%= render 'entries/form' %>
+				<%= render 'entries/form', :entry_name => Entry::OPPORTUNITY %>
 			</div>
   	</div>
   </div>
   <div class="span5">
   	<h3>Threats</h3>
+      <table class="table table-condensed">
+        <%= render @entries, :entry_name => Entry::THREAT %>
+      </table>
+      <div class="inline-form">
+        <%= render 'entries/form', :entry_name => Entry::THREAT  %>
+      </div>
   </div>
 </div>

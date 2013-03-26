@@ -2,6 +2,7 @@
 	<%= simple_form_for([@company, @company.entries.build], html: {class: "form-inline"}) do |f| %>
 	  <%= f.error_notification %>
 	  
+	  <%= f.hidden_field :entry_name, :value => entry_name %>
 	  <%= f.input :description, label: false, placeholder: 'Create an entry', input_html: { class: "span4" } %>
 	  <%= f.submit 'Submit', class: 'btn btn-small'%>
 	<% end %>
