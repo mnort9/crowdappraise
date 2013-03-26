@@ -2,57 +2,42 @@
 <div class="row top-container">
 	<div class="span8">
 		<div class="top-left-content">
-			<h1>SkillShare</h1>
-			<p>Skillshare is a community marketplace to learn anything from anyone. People can offer classes to others on any type of skill, from baking cupcakes to raising startup capital.</p>
-			<p>skillshare.com</p>
+			<h1><%= @company.name %></h1>
+			 <!-- Description is placed in javascipt so Google doesn't index the content -->
+      <p id="element<%=@company.id%>"></p>
+      <script type="text/javascript">
+        var content = "<%= @company.description %>";
+        document.getElementById("element<%=@company.id%>").innerHTML=content;
+      </script>
+      <p><%= @company.url %></p>
 		</div>
 	</div>
-
 	<div class="span4">
-		<%= image_tag("skillshare.png") %>  
+		<%= image_tag @company.image(:medium) %>  
 	</div>
 </div>
-<div class="row">
-    <div class="navbar container">
-      <ul class="nav">
-        <li class="active">
-          <a href="#">
-          Opportunities | Threats
-          </a>
-        </li>
-        <li><a href="#">Competitors</a></li>
-        <li><a href="#">Link</a></li>
-      </ul>
-    </div>
-</div>
-
-
-<!-- 
-  <div class="span3 offset2">
-  	<div class="box selected">
+<div class="row main-content">
+  <div class="span2 sidebar">
+  	<div class="sidebar-box selected">
   	  <h5>Opportunities</h5>
   		<h5>Threats</h5>
   	</div>
+  	<div class="sidebar-box">
+  		<h5>Competitors</h5>
+  	</div>
   </div>
-  <div class="span4 box">
-  	<h5>Competitors</h5>
+  <div class="span5">
+  	<div class="right-border">
+  		<h3>Opportunities</h3>
+			<table class="table table-condensed">
+				<%= render @opportunities %>
+			</table>
+			<div class="inline-form">
+				<%= render 'opportunities/form' %>
+			</div>
+  	</div>
   </div>
- -->
-<div class="main-content">
-  <div class="row">
-    <div class="span6">
-    	<div class="right-border">
-    		<h2>Opportunities</h2>
-  			<table class="table table-condensed">
-  				<%= render @opportunities %>
-  			</table>
-  			<div class="inline-form">
-  				<%= render 'opportunities/form' %>
-  			</div>
-    	</div>
-    </div>
-    <div class="span6">
-    	<h2>Threats</h2>
-    </div>
+  <div class="span5">
+  	<h3>Threats</h3>
   </div>
 </div>

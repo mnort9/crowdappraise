@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.12'
 gem 'devise'
 gem 'simple_form'
+gem 'paperclip'
+gem 'aws-sdk'
 
 group :production do
 	gem "pg"

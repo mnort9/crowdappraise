@@ -41,7 +41,9 @@ class OpportunitiesController < ApplicationController
   # POST /opportunities.json
   def create
     @company = Company.find(params[:company_id])
-    @opportunity = @company.opportunities.create(params[:opportunity])
+    @opportunity = @company.opportunities.new(params[:opportunity])
+    @opportunity.user = current_user # new
+    #@opportunity = current_user.opportunities
     #@opportunity = Opportunity.new(params[:opportunity])
 
     respond_to do |format|

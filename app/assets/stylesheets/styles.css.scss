@@ -1,6 +1,6 @@
 $navbarBackgroundHighlight: white;
 $navbarBackground: white;
-$btnPrimaryBackground: blue;
+$btnPrimaryBackground: green;
 
 @import 'bootstrap';
 body{
@@ -23,48 +23,41 @@ body{
 	padding-right: 8%;
 }
 
-// Nav-content *************
-.navbar.container {
-  text-align:center;
-  width:350px;
+.right-border {
+	border-right: 1px solid LightGrey;
 }
 
-.nav-content {
+.sidebar {
 	background-color:#EEEEEE;
 	text-align: center;
+  min-height: 500px;
+  margin-left: 0px;
 }
 
-.box {
-  text-align:center;
-  border-right:1px solid LightGrey;
-  padding:1px;
+.sidebar-box {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-bottom:1px solid LightGrey;
 }
 
-.box.selected {
+.sidebar-box.selected {
   background-color: DarkGrey;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
-
-.right-border {
-  border-right: 1px solid LightGrey;
-}
-
-// *************
 
 .main-content {
 	text-align: center;
 }
 
 // Table *******
-table {
-  padding-top: 2%;
-}
-
-.table th, .table td {
-  border-top: none; 
+.table th, .table td { 
+     border-top: none; 
  }
 
  .table td.user {
   font-size: 11px;
+
   padding-bottom: 15px;
  }
 
@@ -83,4 +76,27 @@ table {
     a{
         color: $gray;
     }
+}
+
+/* Required for jquery masonry */
+
+.company-box {
+  margin: 5px;
+  padding: 5px;
+  font-size: 11px;
+  line-height: 1.4em;
+  float: left;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px #444;
+  width: 214px;
+}
+
+.company-box img {
+  display: block;
+  width: 100%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }

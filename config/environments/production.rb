@@ -67,4 +67,5 @@ Crowdappraise::Application.configure do
 
   # In production, :host should be set to the actual host of your application.
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
 end

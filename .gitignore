@@ -19,3 +19,9 @@ doc/
 .project
 .DS_Store
 .idea
+
+# Ignore Paperclip uploaded files
+/public/system
+
+# Ignore development env sensitive data
+/config/app_environment_variables.rb
